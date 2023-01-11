@@ -31,7 +31,7 @@ $fonts: (
 }
 
 html, body, #content {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -43,6 +43,11 @@ body {
 .img-responsive {
   max-width: 100%;
   height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
 .home-bg-image {
@@ -139,6 +144,7 @@ footer {
 
 .homeContainer {
   @extend .container;
+  flex: 1;
   gap: 1.5rem;
 
   h1 {
@@ -178,6 +184,7 @@ footer {
 
 .menuContainer {
   @extend .container;
+  flex: 1;
   color: white;
 
   h2 {
@@ -211,7 +218,7 @@ footer {
 
   .left {
     display: flex;
-    flex-basis: 30%;
+    flex-basis: 25%;
 
     img {
       @extend .img-responsive;
@@ -221,7 +228,6 @@ footer {
   .right {
     display: flex; 
     flex-direction: column; 
-    width: 100%; 
     flex-basis: 70%;
 
     .right-top {
@@ -247,12 +253,14 @@ footer {
       width: 100%;
       text-align: justify;
       font-weight: 200;
+      font-size: 0.875rem;
     }
   }
 }
 
 .aboutContainer {
   @extend .menuContainer;
+  flex: 1;
 
   span {
     width: 40%;
@@ -264,6 +272,6 @@ footer {
   .location {
     background: url("../assets/images/location.png");
     width: 40%;
-    height: 40%;
+    height: 400px;
   }
 }

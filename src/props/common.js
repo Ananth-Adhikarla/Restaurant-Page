@@ -5,7 +5,7 @@ import {about} from "./about.js";
 import divider from "../assets/images/divider.png";
 import pizza1 from "../assets/images/pizza1.jpg";
 import pizza2 from "../assets/images/pizza2.jpg";
-import pizza3 from "../assets/images/pizza2.jpg";
+import pizza3 from "../assets/images/pizza3.jpg";
 
 
 export const CreateElement = (jsonObject, appendTo) => {
