@@ -10,7 +10,7 @@
 }
 
 html, body, #content {
-  height: 100%;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -22,6 +22,11 @@ body {
 .img-responsive, .menuItems .left img {
   max-width: 100%;
   height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
 }
 
 .home-bg-image {
@@ -107,6 +112,7 @@ footer a {
 }
 
 .homeContainer {
+  flex: 1;
   gap: 1.5rem;
 }
 .homeContainer h1 {
@@ -141,6 +147,7 @@ footer a {
 }
 
 .menuContainer, .aboutContainer {
+  flex: 1;
   color: white;
 }
 .menuContainer h2, .aboutContainer h2 {
@@ -173,12 +180,11 @@ footer a {
 }
 .menuItems .left {
   display: flex;
-  flex-basis: 30%;
+  flex-basis: 25%;
 }
 .menuItems .right {
   display: flex;
   flex-direction: column;
-  width: 100%;
   flex-basis: 70%;
 }
 .menuItems .right .right-top {
@@ -201,8 +207,12 @@ footer a {
   width: 100%;
   text-align: justify;
   font-weight: 200;
+  font-size: 0.875rem;
 }
 
+.aboutContainer {
+  flex: 1;
+}
 .aboutContainer span {
   width: 40%;
   display: flex;
@@ -212,5 +222,5 @@ footer a {
 .aboutContainer .location {
   background: url(images/f97bcde7497945237356.png);
   width: 40%;
-  height: 40%;
+  height: 400px;
 }
