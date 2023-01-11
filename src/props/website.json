@@ -1,0 +1,131 @@
+{
+  "header": 
+    [
+      {
+        "name": "li",
+        "text": "Home",
+        "style": [],
+        "id": "Home",
+        "target": "LoadHome"
+      },
+      {
+        "name": "li",
+        "text": "Menu",
+        "style": [],
+        "id": "Menu",
+        "target": "LoadMenu"
+      },
+      {
+        "name": "li",
+        "text": "About",
+        "style": [],
+        "id": "About",
+        "target": "LoadAbout"
+      }
+    ]
+  ,
+  "footer": [
+    {
+      "name": "span",
+      "text": "Created by Ananth Adhikarla - The Odin Project 2023",
+      "style": []
+    },
+    {
+      "name": "a",
+      "text": "https://github.com/Ananth-Adhikarla",
+      "style": ["fa-brands", "fa-square-git"]
+    }
+  ],
+  "home": [
+    {
+      "name": "h1",
+      "text": "PizzaVerse",
+      "style": []
+    },
+    {
+      "name": "h3",
+      "text": "Every Flavor Tells a Story",
+      "style": []
+    },
+    {
+      "name": "button",
+      "text": "Explore Our Menu",
+      "style": [],
+      "id": "menu_btn",
+      "target": "LoadMenu"
+    }
+  ],
+  "menu": [
+    {
+      "name": "h2",
+      "text": "Menu",
+      "style": []
+    },
+    {
+      "name": "hr",
+      "text": "",
+      "style": ["divider1"]
+    },
+    {
+      "name": "card",
+      "img": "pizza1",
+      "title": "Pizza Vegetale",
+      "price": "$9.99",
+      "desc": "Experience passion on your palate with Vegetale! Thin & crispy Italian-style pizza. Thin crust pizza is topped with tomatoes, peppers, onions and olivers over our signature homemade sauce.",
+      "style": []
+    },
+    {
+      "name": "img",
+      "text": "",
+      "style": ["divider2"]
+    },
+    {
+      "name": "card",
+      "img": "pizza2",
+      "title": "Pepperoni Pizza",
+      "price": "$14.99",
+      "desc": "Topped with gooey mozzarella cheese and mild pepperoni, this pepperoni pizza has that classic pizza flavour that won't disappoint.",
+      "style": []
+    },
+    {
+      "name": "img",
+      "text": "",
+      "style": ["divider2"]
+    },
+    {
+      "name": "card",
+      "img": "pizza3",
+      "title": "Classic 4 Cheese",
+      "price": "$14.99",
+      "desc": "An irresistible pizza, covered in cheese. Proudly prepared with finest Canadian cheeses, each crispy bite unleashes cheesy delight, made with only the highest quality ingredients.",
+      "style": []
+    }
+  ],
+  "about": [
+    {
+      "name": "h2",
+      "text": "Contact Us",
+      "style": []
+    },
+    {
+      "name": "hr",
+      "text": "",
+      "style": ["divider1"]
+    },
+    {
+      "name": "span",
+      "text": "Phone: 1-800-U-KNOW",
+      "style": []
+    },
+    {
+      "name": "span",
+      "text": "Address: 742 Evergreen Terrace, Springfield",
+      "style": []
+    },
+    {
+      "name": "div",
+      "text": "",
+      "style": ["location"]
+    }
+  ]
+}

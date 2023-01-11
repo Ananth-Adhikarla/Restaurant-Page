@@ -1,0 +1,269 @@
+@use 'sass:map';
+@use 'sass:string';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+
+
+$gold: #AD974F;
+$gold-nav: #916f00;
+$white: #FFFFFF;
+$black: #0e0d0c;
+$nav_height: 100px;
+$footer_height: 60px;
+
+$fonts: (
+  "poppins" : "'Poppins', sans-serif",
+  "playfair" : "'Playfair Display', serif"
+);
+
+@function font($font) {
+  @return string.unquote(map.get($fonts, $font));
+} 
+
+* {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	box-sizing: border-box;
+}
+
+html, body, #content {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: font(poppins);
+  letter-spacing: 2px;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: 100%;
+}
+
+.home-bg-image {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../assets/images/body-bg.jpg");
+}
+
+.home-default {
+  background: $black;
+}
+
+/*
+  NAV BAR
+*/
+
+header {
+  display: flex;
+  width: 100%;
+  height: $nav_height;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    list-style: none;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    padding: 0 40px;
+
+    li {
+      color: $white;
+      font-size: 1.2rem;
+      font-weight: 200;
+      position: relative;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0;
+        width: 30%;
+        border-bottom: 2px solid $gold-nav;
+        transition: width 0.3s ease;
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*
+  Footer
+*/
+
+footer {
+  display: flex;
+  width: 100%;
+  height: $footer_height;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  color: $white;
+
+  span {
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 0 20px;  
+  }
+
+  a {
+    font-size: 24px;
+    padding: 0 20px;
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+
+/*
+  Container
+*/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: calc(100% - $nav_height - $footer_height);
+}
+
+.homeContainer {
+  @extend .container;
+  gap: 1.5rem;
+
+  h1 {
+    font-family: font(playfair);
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    box-shadow: 2px 2px 0px 0px #a39569;
+    color: $gold;
+    padding: 0 20px;
+  }
+  
+  h3 {
+    font-family: font(playfair);
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: $white;
+  }
+
+  button {
+    margin-top: 10rem;
+    outline: none;
+    padding: 10px 20px;
+    width: 250px;
+    background: transparent;
+    border: 1px solid #977a1c;
+    color: #d3c69d;
+    font-weight: 400;
+    transition: 0.5s cubic-bezier(0, 0.9, 1, 1);
+
+    &:hover {
+      background: #977a1c;
+      color: $black;
+    }
+  }
+}
+
+.menuContainer {
+  @extend .container;
+  color: white;
+
+  h2 {
+    font-family: font(playfair);
+    font-size: 2rem;
+    font-weight: 600;
+    color: $gold;
+    letter-spacing: 0.15rem;
+  }
+}
+
+.divider1 {
+  width: 40%;
+  height: 10px;
+  border-top: 1px solid $white;
+  margin: 10px 0;
+  opacity: 0.5;
+}
+
+.divider2 {
+  width: 12%;
+  margin: 20px 0;
+  rotate: 180deg;
+}
+
+.menuItems {
+  display: flex;
+  width: 60%;
+  justify-content: center;
+  align-items: center;
+
+  .left {
+    display: flex;
+    flex-basis: 30%;
+
+    img {
+      @extend .img-responsive;
+    }
+  }
+
+  .right {
+    display: flex; 
+    flex-direction: column; 
+    width: 100%; 
+    flex-basis: 70%;
+
+    .right-top {
+      display: flex;
+
+      .title {
+        display: flex; 
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 0 20px;
+      }
+  
+      .price {
+        display: flex;
+        align-items: center;
+        margin-left: auto; 
+      }
+    }
+
+    .description {
+      display: flex; 
+      margin-left: 20px;
+      width: 100%;
+      text-align: justify;
+      font-weight: 200;
+    }
+  }
+}
+
+.aboutContainer {
+  @extend .menuContainer;
+
+  span {
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0;
+  }
+
+  .location {
+    background: url("../assets/images/location.png");
+    width: 40%;
+    height: 40%;
+  }
+}
